@@ -85,7 +85,9 @@ function AddNew({ inputs, title, type }) {
             //     userInp
             // );
             await axios.post(
-                `https://rooms-dashboard-web.onrender.com/api/${type === 'USER' ? 'user/signup' : 'blog/create'}`,
+                `https://rooms-dashboard-web.onrender.com/api/${
+                    type === 'USER' ? 'user/signup' : 'blog/create'
+                }`,
                 userInp
             );
 

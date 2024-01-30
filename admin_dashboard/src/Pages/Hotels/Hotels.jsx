@@ -85,7 +85,7 @@ function Hotels({ type }) {
         const datass = async () => {
             const res = await axios.get('https://rooms-dashboard-web.onrender.com/api/hotels');
             setData(res.data.message);
-            setIsLoading(false)
+            setIsLoading(false);
         };
         datass();
     }, []);

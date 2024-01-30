@@ -42,7 +42,7 @@ function Rooms({ type }) {
         try {
             axios.delete(`https://rooms-dashboard-web.onrender.com/api/${path}/${id}`);
             setIsLoading(true);
-           
+
             setData(data.filter((item) => item.id !== id));
 
             console.log(`deleted room ${id}`);
