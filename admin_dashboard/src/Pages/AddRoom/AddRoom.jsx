@@ -28,7 +28,7 @@ function AddRoom({ inputs, title, type }) {
    update the state variables `roomData` with the response data. */
     useEffect(() => {
         const roomsss = async () => {
-            const hotel = await axios.get('http://127.0.0.1:8080/api/hotels');
+            const hotel = await axios.get('https://rooms-dashboard-web.onrender.com/api/hotels');
             // const hotel = await axios.get('https://rooms-backend.onrender.com/api/hotels');
             setRoomData(hotel.data.message);
         };
@@ -55,7 +55,7 @@ function AddRoom({ inputs, title, type }) {
         try {
             setLoading(true);
 
-            await axios.post(`http://127.0.0.1:8080/api/room/${hotelId}`, datas);
+            await axios.post(`https://rooms-dashboard-web.onrender.com/api/room/${hotelId}`, datas);
 
             setLoading(false);
             nevigate(`/rooms`);

@@ -72,7 +72,7 @@ function Blogs({ type }) {
     useEffect(() => {
         const getData = async () => {
             // const datas = await axios.get('https://rooms-backend.onrender.com/api/blogs');
-            const datas = await axios.get('http://127.0.0.1:8080/api/blogs');
+            const datas = await axios.get('https://rooms-dashboard-web.onrender.com/api/blogs');
             setData(datas.data.message);
             setIsLoading(false);
         };
@@ -82,7 +82,7 @@ function Blogs({ type }) {
     useEffect(() => {
         const getData = async () => {
             // const datas = await axios.get('https://rooms-backend.onrender.com/api/blogs');
-            const datas = await axios.get('http://127.0.0.1:8080/api/blogs');
+            const datas = await axios.get('https://rooms-dashboard-web.onrender.com/api/blogs');
             setData(datas.data.message);
             setIsLoading(false);
         };
@@ -96,7 +96,7 @@ function Blogs({ type }) {
     const handleDlt = (id) => {
         try {
             // axios.delete(`https://rooms-backend.onrender.com/api/${path}/${id}`);
-            axios.delete(`http://127.0.0.1:8080/api/${path}/${id}`);
+            axios.delete(`https://rooms-dashboard-web.onrender.com/api/${path}/${id}`);
             setIsLoading(true);
             setData(data.filter((item) => item.id !== id));
             console.log(`deleted user ${id}`);

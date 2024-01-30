@@ -83,17 +83,16 @@ function Hotels({ type }) {
    effect is triggered when the `data` state variable changes. */
     useEffect(() => {
         const datass = async () => {
-            const res = await axios.get('http://127.0.0.1:8080/api/hotels');
-            // const res = await axios.get('https://rooms-backend.onrender.com/api/hotels');
+            const res = await axios.get('https://rooms-dashboard-web.onrender.com/api/hotels');
             setData(res.data.message);
+            setIsLoading(false)
         };
         datass();
     }, []);
 
     useEffect(() => {
         const datass = async () => {
-            const res = await axios.get('http://127.0.0.1:8080/api/hotels');
-            // const res = await axios.get('https://rooms-backend.onrender.com/api/hotels');
+            const res = await axios.get('https://rooms-dashboard-web.onrender.com/api/hotels');
             setData(res.data.message);
             setIsLoading(false);
         };
@@ -106,7 +105,7 @@ function Hotels({ type }) {
      */
     const handleDlt = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:8080/api/${path}/${id}`);
+            await axios.delete(`https://rooms-dashboard-web.onrender.com/api/${path}/${id}`);
             setIsLoading(true);
             // await axios.delete(`https://rooms-backend.onrender.com/api/${path}/${id}`);
             setData(data.filter((item) => item.id !== id));

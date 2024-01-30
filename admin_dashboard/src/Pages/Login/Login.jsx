@@ -29,8 +29,7 @@ const index = () => {
 
         try {
             const res = await axios.post(
-                'http://localhost:8080/api/user/login',
-                // 'https://rooms-backend.onrender.com/api/user/login',
+                'https://rooms-dashboard-web.onrender.com/api/user/login',
                 inpVal
             );
             console.log('response:', res);

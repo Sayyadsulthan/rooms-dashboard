@@ -21,10 +21,10 @@ function ProgressBar() {
    (`userData`, `hotelData`, `blogData`, `roomData`) with the received data. */
     useEffect(() => {
         const datass = async () => {
-            const res = await axios.get('http://127.0.0.1:8080/api/rooms');
-            const res2 = await axios.get('http://127.0.0.1:8080/api/blogs');
-            const res3 = await axios.get('http://127.0.0.1:8080/api/users');
-            const res4 = await axios.get('http://127.0.0.1:8080/api/rooms');
+            const res = await axios.get('https://rooms-dashboard-web.onrender.com/api/rooms');
+            const res2 = await axios.get('https://rooms-dashboard-web.onrender.com/api/blogs');
+            const res3 = await axios.get('https://rooms-dashboard-web.onrender.com/api/users');
+            const res4 = await axios.get('https://rooms-dashboard-web.onrender.com/api/rooms');
             // const res = await axios.get('https://rooms-backend.onrender.com/api/rooms');
             // const res2 = await axios.get('https://rooms-backend.onrender.com/api/blogs');
             // const res3 = await axios.get('https://rooms-backend.onrender.com/api/users');

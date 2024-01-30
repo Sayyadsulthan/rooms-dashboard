@@ -87,7 +87,7 @@ function AddHotel({ inputs, title, type }) {
                 images: imgList,
             };
 
-            await axios.post('http://127.0.0.1:8080/api/hotel/create', newHotel);
+            await axios.post('https://rooms-dashboard-web.onrender.com/api/hotel/create', newHotel);
             // await axios.post('https://rooms-backend.onrender.com/api/hotel/create', newHotel);
             setLoading(false);
             nevigate(`/hotels`);

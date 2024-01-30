@@ -21,7 +21,7 @@ function Detail() {
     useEffect(() => {
         setLoading(true);
         const fetchData = async () => {
-            const data = await axios.get(`http://127.0.0.1:8080/api/user/${path}`);
+            const data = await axios.get(`https://rooms-dashboard-web.onrender.com/api/user/${path}`);
             // const data = await axios.get(`https://rooms-backend.onrender.com/api/user/${path}`);
             setUserData(data.data.message);
         };

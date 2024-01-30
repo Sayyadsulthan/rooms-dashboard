@@ -18,7 +18,7 @@ function DataTable() {
 data. */
     useEffect(() => {
         const dataCall = async () => {
-            const res = await axios.get(`http://127.0.0.1:8080/api/${path}`);
+            const res = await axios.get(`https://rooms-dashboard-web.onrender.com/api/${path}`);
             // const res = await axios.get(`https://rooms-backend.onrender.com/api/${path}`);
             setData(res.data.message);
             setIsLoading(false);
@@ -28,7 +28,7 @@ data. */
 
     useEffect(() => {
         const dataCall = async () => {
-            const res = await axios.get(`http://127.0.0.1:8080/api/${path}`);
+            const res = await axios.get(`https://rooms-dashboard-web.onrender.com/api/${path}`);
             // const res = await axios.get(`https://rooms-backend.onrender.com/api/${path}`);
             setData(res.data.message);
             setIsLoading(false);
@@ -42,7 +42,7 @@ data. */
      */
     const handleDlt = async (id) => {
         try {
-            axios.delete(`http://127.0.0.1:8080/api/${path}/${id}`);
+            axios.delete(`https://rooms-dashboard-web.onrender.com/api/${path}/${id}`);
             setIsLoading(true);
             // axios.delete(`https://rooms-backend.onrender.com/api/${path}/${id}`);
             setData(data.filter((item) => item.id !== id));
