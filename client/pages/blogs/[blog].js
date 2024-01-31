@@ -25,10 +25,10 @@ const blogDetails = ({ blogList1, blogss }) => (
                     src={blogList1.image ? blogList1.image : noPhoto}
                     alt="Travel blogs"
                     className={style.blog_detail_img}
-                    height={400}
-                    width={600}
+                    // height={400}
+                    // width={600}
                     objectFit="cover"
-                    layout="responsive"
+                    layout="fill"
                 />
 
                 <div className={style.blog_detail_tv}>
@@ -70,7 +70,6 @@ const blogDetails = ({ blogList1, blogss }) => (
 );
 export default blogDetails;
 
-
 // The function `getStaticPaths` retrieves data from an API endpoint and generates an array of paths
 // based on the response data.
 // @returns an object with two properties: "paths" and "fallback".
@@ -89,7 +88,6 @@ export async function getStaticPaths() {
         fallback: false,
     };
 }
-
 
 // The function `getStaticProps` is an asynchronous function that fetches data from two API routes and
 // returns the data as props.

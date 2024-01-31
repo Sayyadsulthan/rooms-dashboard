@@ -26,7 +26,7 @@ const index = () => {
 
     //  The `inpDetail` constant is an array of objects that contains the details of the input fields
     // used in the login form. Each object represents an input field and contains the following
-    // properties: 
+    // properties:
     const inpDetail = [
         {
             id: 2,
@@ -45,7 +45,6 @@ const index = () => {
             errMsg: 'This field is required!',
         },
     ];
-
 
     //   The handleChng function updates the value of a specific property in the inpval object based on
     //   the user's input.
@@ -66,7 +65,6 @@ const index = () => {
             toast.addEventListener('mouseleave', Swal.resumeTimer);
         },
     });
-
 
     // The handleSubmit function is used to handle form submission for user login, making a POST
     // request to the specified API endpoint and dispatching actions based on the response.
@@ -129,10 +127,10 @@ const index = () => {
                             <FaTwitter style={{ marginRight: '5px' }} /> Twitter
                         </div>
 
-                        <Link href="/signup">
-                            <a href="" className={styles.login_link}>
-                                Don&apos;t have an account? Register hare..
-                            </a>
+                        <Link href="/signup" className={styles.login_link}>
+                            {/* <a href="" className={styles.login_link}> */}
+                            Don&apos;t have an account? Register hare..
+                            {/* </a> */}
                         </Link>
                     </form>
                 </div>
